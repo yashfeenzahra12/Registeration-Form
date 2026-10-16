@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 25px;
+            font-family: Arial, sans-serif;
+            background: #e3f3ff;
+            color: #111;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h1 {
+            background: #2463a6;
+            color: white;
+            text-align: center;
+            padding: 22px 10px;
+            border-radius: 18px;
+            font-size: 35px;
+            margin-bottom: 25px;
+        }
+
+        form {
+            border: 3px solid black;
+            padding: 25px 15px;
+            background: #cce6ff;
+            text-align: center;
+        }
+
+        .form-row {
+            margin: 12px 0;
+        }
+
+        label {
+            font-size: 19px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 300px;
+            max-width: 95%;
+            padding: 9px;
+            font-size: 17px;
+            border: 1px solid #aaa;
+            border-radius: 4px;
+        }
+
+        #name {
+            text-transform: uppercase;
+        }
+
+        .section-title {
+            font-size: 21px;
+            margin: 16px 0 8px;
+        }
+
+        .options {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 22px;
+            margin: 10px 0;
+        }
+
+        .options label {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #0878cc;
+        }
+
+        select {
+            padding: 8px;
+            font-size: 17px;
+            border: 1px solid #aaa;
+            border-radius: 4px;
+            background: white;
+        }
+
+        textarea {
+            width: 400px;
+            max-width: 95%;
+            height: 90px;
+            padding: 12px;
+            font-size: 17px;
+            border: 1px solid #aaa;
+            border-radius: 4px;
+            resize: vertical;
+        }
+
+        input[type="file"] {
+            max-width: 100%;
+            font-size: 15px;
+        }
+
+        .file-row {
+            margin-top: 18px;
+        }
+
+        .buttons {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        button {
+            min-width: 140px;
+            padding: 9px 18px;
+            font-size: 17px;
+            background: #edf5fc;
+            border: 1px solid #9aaaba;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #b8d9f5;
+        }
+
+        .submit-label,
+        .reset-label {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            color: #456b91;
+            margin-top: 25px;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+
+            form {
+                padding: 15px 8px;
+            }
+
+            .form-row > label {
+                display: block;
+                margin-bottom: 8px;
+            }
+
+            input[type="text"],
+            input[type="password"] {
+                width: 100%;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>2.9 Submit and Reset Buttons</h1>
+
+    <form id="registrationForm">
+
+        <div class="form-row">
+            <label for="name">Please Enter Your Name:</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Use upper case letters"
+                required
+            >
+        </div>
+
+        <div class="form-row">
+            <label for="password">Please Enter Your Password:</label>
+            <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter password"
+                required
+            >
+        </div>
+
+        <div class="section-title">
+            Which languages do you know?
+        </div>
+
+        <div class="options">
+            <label>
+                <input type="radio" name="language" value="C++" required>
+                C++
+            </label>
+
+            <label>
+                <input type="radio" name="language" value="VB">
+                VB
+            </label>
+
+            <label>
+                <input type="radio" name="language" value="Java">
+                Java
+            </label>
+        </div>
+
+        <div class="section-title">Your Gender?</div>
+
+        <div class="options">
+            <label>
+                <input type="radio" name="gender" value="Male" required>
+                Male
+            </label>
+
+            <label>
+                <input type="radio" name="gender" value="Female">
+                Female
+            </label>
+        </div>
+
+        <div class="form-row">
+            <label for="domicile">Your Domicile:</label>
+
+            <select id="domicile" name="domicile" required>
+                <option value="Punjab" selected>Punjab</option>
+                <option value="Sindh">Sindh</option>
+                <option value="Khyber Pakhtunkhwa">
+                    Khyber Pakhtunkhwa
+                </option>
+                <option value="Balochistan">Balochistan</option>
+                <option value="Islamabad">Islamabad</option>
+                <option value="Gilgit-Baltistan">Gilgit-Baltistan</option>
+                <option value="Azad Kashmir">Azad Kashmir</option>
+            </select>
+        </div>
+
+        <div class="form-row">
+            <div class="section-title">Your Address:</div>
+
+            <textarea
+                id="address"
+                name="address"
+                placeholder="Your permanent address"
+                required
+            ></textarea>
+        </div>
+
+        <div class="form-row file-row">
+            <label for="cv">Attach your CV:</label>
+
+            <input
+                type="file"
+                id="cv"
+                name="cv"
+                accept=".pdf,.doc,.docx"
+                required
+            >
+        </div>
+
+        <div class="buttons">
+            <span class="submit-label">Submit →</span>
+
+            <button type="submit">Register</button>
+
+            <button type="reset">Fill Again</button>
+
+            <span class="reset-label">← Reset</span>
+        </div>
+
+    </form>
+
+    <footer>
+        Registration Form Project<br>
+        Department of Computer Science
+    </footer>
+
+</div>
+
+<script>
+    const form = document.getElementById("registrationForm");
+    const nameInput = document.getElementById("name");
+
+    // Convert the name to uppercase as the user types.
+    nameInput.addEventListener("input", function () {
+        const start = this.selectionStart;
+        const end = this.selectionEnd;
+
+        this.value = this.value.toUpperCase();
+
+        this.setSelectionRange(start, end);
+    });
+
+    // Demonstration submission.
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+        }
+
+        const selectedLanguage =
+            form.querySelector('input[name="language"]:checked').value;
+
+        const selectedGender =
+            form.querySelector('input[name="gender"]:checked').value;
+
+        alert(
+            "Registration form submitted successfully!\n\n" +
+            "Name: " + nameInput.value + "\n" +
+            "Language: " + selectedLanguage + "\n" +
+            "Gender: " + selectedGender + "\n" +
+            "Domicile: " + document.getElementById("domicile").value
+        );
+    });
+
+    // The reset button clears fields and restores default values.
+    form.addEventListener("reset", function () {
+        setTimeout(function () {
+            nameInput.value = "";
+        }, 0);
+    });
+</script>
+
+</body>
+</html>
